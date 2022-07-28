@@ -1,19 +1,20 @@
 import React from 'react'
-// import { useState } from 'react'
+import Card from './shared/Card'
+import PropTypes from 'prop-types';
 
 const Feedbackitem = ({ item }) => {
 
-    // Set the state
-    // const [rating, setRating] = useState(7)
-    // const [text, setText] = useState('This is an example of a feedback item')
-
-
     return (
-        <div className='card'>
+        <Card>
             <div className="num-display">{item.rating}</div>
             <div className="text-display">{item.text}</div>
-        </div>
+        </Card>
     )
+}
+
+// PropTypes
+Feedbackitem.propTypes = {
+    children: PropTypes.object.isRequired,
 }
 
 export default Feedbackitem
